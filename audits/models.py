@@ -22,7 +22,7 @@ class Control(models.Model):
 	code = models.CharField(max_length=255, unique=True)
 	description = models.TextField()
 	type = models.CharField(max_length=255)
-	iso_type = models.CharField(max_length=20, choices=ISOType.choices)
+	iso_type = models.CharField(max_length=20, choices=ISOType.choices, default=ISOType.ISO_27001)
 
 	def __str__(self):
 		return self.code
