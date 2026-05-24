@@ -18,6 +18,7 @@ class Control(models.Model):
 	class ISOType(models.TextChoices):
 		ISO_27001 = "ISO 27001"
 		ISO_27002 = "ISO 27002"
+		ISO_27701 = "ISO 27701"
 
 	code = models.CharField(max_length=255, unique=True)
 	title = models.CharField(max_length=255)
