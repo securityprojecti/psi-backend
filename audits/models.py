@@ -20,6 +20,7 @@ class Control(models.Model):
 		ISO_27002 = "ISO 27002"
 
 	code = models.CharField(max_length=255, unique=True)
+	title = models.CharField(max_length=255)
 	description = models.TextField()
 	type = models.CharField(max_length=255)
 	iso_type = models.CharField(max_length=20, choices=ISOType.choices, default=ISOType.ISO_27001)

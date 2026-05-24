@@ -5,7 +5,7 @@ from .models import Audit, Control, Answer
 class ControlSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Control
-		fields = ["id", "code", "description", "type"]
+		fields = ["id", "code", "description", "type", "iso_type"]
 
 
 class AnswerSerializer(serializers.ModelSerializer):
