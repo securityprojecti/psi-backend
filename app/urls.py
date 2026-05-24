@@ -3,9 +3,13 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 from companies.views import CompanyViewSet
+from audits.views import AuditViewSet, ControlViewSet, AnswerViewSet
 
 router = DefaultRouter()
 router.register(r'companies', CompanyViewSet, basename='company')
+router.register(r"audits", AuditViewSet, basename="audit")
+router.register(r"controls", ControlViewSet, basename="control")
+router.register(r"answers", AnswerViewSet, basename="answer")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,5 +26,4 @@ urlpatterns = [
     ),
     path('api/v1/', include(router.urls)),
     path('api/v1/', include('authentication.urls')),
-    path('api/v1/', include('audits.urls')),
 ]
