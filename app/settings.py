@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
 	'rest_framework_simplejwt',
     "drf_spectacular",
+	"corsheaders",
 	"app",
     "authentication",
 	"companies",
@@ -144,8 +145,8 @@ SIMPLE_JWT = {
 
 # Spectacular settings
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'To Do API',
-    'DESCRIPTION': 'API para gerenciar tarefas. Criada para ser utilizada na matéria de Fundamentos de DevOps.',
+    'TITLE': 'Projeto de Segurança I',
+    'DESCRIPTION': 'API para gerenciar o Projeto de Segurança I',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SWAGGER_UI_SETTINGS': {
@@ -153,3 +154,6 @@ SPECTACULAR_SETTINGS = {
         'defaultModelsExpandDepth': -1,
     },
 }
+
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True
